@@ -11,4 +11,6 @@ class SistemaDeDefesa extends NaveDecorator {
         super.ativar();
         System.out.println("Ativando Sistemas de Defesa");
     }
+
+
 }

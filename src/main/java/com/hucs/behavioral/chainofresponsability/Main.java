@@ -1,6 +1,6 @@
 package com.hucs.behavioral.chainofresponsability;
 
-import behavioral.chainofresponsability.system.SistemaPrincipal;
+import com.hucs.behavioral.chainofresponsability.system.SistemaPrincipal;
 
 public class Main {
     public static void main(String[] args){

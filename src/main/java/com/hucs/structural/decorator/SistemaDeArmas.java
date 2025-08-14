@@ -9,6 +9,10 @@ class SistemaDeArmas extends NaveDecorator {
     @Override
     public void ativar() {
         super.ativar();
+        ativarSistema();
+    }
+
+    public void ativarSistema(){
         System.out.println("Ativando Sistemas de Armas");
     }
 

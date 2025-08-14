@@ -10,6 +10,8 @@ class Main {
         nave = new SistemaDeArmas(nave);
         nave = new SistemaDeDefesa(nave);
         nave = new SistemaDePropulsao(nave);
+
+        //adicionando de forma personalizada
         nave = new NaveDecorator(nave) {
             @Override
             public void ativar() {
@@ -20,5 +22,6 @@ class Main {
 
         // Mostrando o resultado
         nave.ativar();
+
     }
 }

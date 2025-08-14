@@ -1,6 +1,6 @@
 package com.hucs.structural.facade;
 
-import structural.facade.sistemas.ControleDosSistemasFacade;
+import com.hucs.structural.facade.sistemas.ControleDosSistemasFacade;
 
 class Main {
 

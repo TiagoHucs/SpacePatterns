@@ -9,6 +9,10 @@ class SistemaDePropulsao extends NaveDecorator {
     @Override
     public void ativar() {
         super.ativar();
+        ligarMotor();
+    }
+
+    public void ligarMotor() {
         System.out.println("Ativando Sistemas de Propulsão");
     }
 }
