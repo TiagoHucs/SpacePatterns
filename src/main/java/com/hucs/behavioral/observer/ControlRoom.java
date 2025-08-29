@@ -1,6 +1,7 @@
 package com.hucs.behavioral.observer;
 
 class ControlRoom implements Observer{
+
     private String name;
 
     public ControlRoom(String name) {
@@ -8,7 +9,7 @@ class ControlRoom implements Observer{
     }
 
     @Override
-    public void update(String message) {
-        System.out.println("Sala de Monitoramento " + name + ": Alerta recebido - " + message);
+    public void inputMessage(String message) {
+        System.out.println(String.format("[%s] - MSG incomming: %s",name,message));
     }
 }

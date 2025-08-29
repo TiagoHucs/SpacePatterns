@@ -3,9 +3,8 @@ package com.hucs.behavioral.observer;
 import java.util.ArrayList;
 import java.util.List;
 
-class Satellite implements Subject, Observer{
+class Satellite implements ISatellite, Observer{
     List<Observer> observers = new ArrayList<>();
-    String alert;
     String name;
 
     public Satellite(String name) {
@@ -17,25 +16,18 @@ class Satellite implements Subject, Observer{
         this.observers.add(observer);
     }
 
-    @Override
-    public void removeObserver(Observer observer) {
-        this.observers.remove(observer);
-    }
-
-    @Override
-    public void notifyObservers() {
+    private void notifyObservers(String msg) {
         for (Observer o: observers){
-            o.update(this.alert);
+            o.inputMessage(msg);
         }
     }
 
-    public void setAlert(String s){
-        this.alert = s;
-        notifyObservers();
+    public void openSolarPanels() {
+        this.notifyObservers(this.name + " - Solar pannels open");
     }
 
     @Override
-    public void update(String message) {
+    public void inputMessage(String message) {
         System.out.println("Satelite " + name + ": Alerta recebido - " + message);
     }
 }

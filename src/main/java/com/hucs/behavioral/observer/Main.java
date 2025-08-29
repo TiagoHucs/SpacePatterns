@@ -3,20 +3,20 @@ package com.hucs.behavioral.observer;
 public class Main {
     public static void main(String[] a){
 
-        ControlRoom nasaRoom = new ControlRoom("Nasa control");
-        ControlRoom presidentRoom = new ControlRoom("President control");
+        ControlRoom basicControl = new ControlRoom("Nasa control");
+        ControlRoom securityControl = new ControlRoom("Security control");
 
         Satellite weatherSat = new Satellite("Weather Sat");
         Satellite spySat = new Satellite("Spy Sat");
 
-        weatherSat.addObserver(nasaRoom);
-        weatherSat.addObserver(presidentRoom);
+        weatherSat.addObserver(basicControl);
+        weatherSat.addObserver(securityControl);
         weatherSat.addObserver(spySat);
 
-        spySat.addObserver(presidentRoom);
+        spySat.addObserver(securityControl);
 
 
-        weatherSat.setAlert("Aleta de chuva!");
-        spySat.setAlert("Aleta de ataque intercontinental!");
+        weatherSat.openSolarPanels();
+        spySat.openSolarPanels();
     }
 }

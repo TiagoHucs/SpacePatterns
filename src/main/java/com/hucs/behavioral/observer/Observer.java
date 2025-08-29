@@ -1,5 +1,5 @@
 package com.hucs.behavioral.observer;
 
 interface Observer {
-    void update(String message);
+    void inputMessage(String message);
 }
